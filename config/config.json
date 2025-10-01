@@ -1,0 +1,9 @@
+{
+  "excludeDirs": [],
+  "excludeFiles": [
+    "package.json",
+    "*.meta"
+  ],
+  "includeFiles": true,
+  "maxDepth": 2
+}
