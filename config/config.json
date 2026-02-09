@@ -23,6 +23,5 @@
     "*.anim",
     "*.ogg"
   ],
-  "includeFiles": true,
-  "maxDepth": 0
+  "includeFiles": true
 }

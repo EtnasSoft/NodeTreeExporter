@@ -1,13 +1,16 @@
 {
   "name": "nodetreeexporter",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/cli.js",
   "scripts": {
-    "tree-export": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tree-export": "node src/cli.js",
+    "test": "node --test test/*.test.js"
   },
   "bin": {
-    "tree-export": "./src/index.js"
+    "tree-export": "./src/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "keywords": [
     "node",
@@ -19,7 +22,6 @@
   "license": "ISC",
   "description": "A Node.js script to export the directory tree structure to a text file.",
   "dependencies": {
-    "fs-extra": "^11.1.1",
     "minimatch": "^10.0.3"
   }
 }
