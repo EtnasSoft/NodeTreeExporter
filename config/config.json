@@ -1,9 +1,28 @@
 {
-  "excludeDirs": [],
+  "excludeDirs": [
+    ".git",
+    ".github",
+    ".vscode",
+    "Library",
+    "Logs",
+    "Temp",
+    "obj",
+    "bin",
+    "Builds",
+    "Packages"
+  ],
   "excludeFiles": [
     "package.json",
-    "*.meta"
+    "*.meta",
+    "*.asset",
+    "*.prefab",
+    "*.png",
+    "*.mp3",
+    "*.controller",
+    "*.aseprite",
+    "*.anim",
+    "*.ogg"
   ],
   "includeFiles": true,
-  "maxDepth": 2
+  "maxDepth": 0
 }

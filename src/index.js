@@ -2,13 +2,14 @@
 
 const fs = require("fs");
 const path = require("path");
+const { minimatch } = require("minimatch");
 
 // Function to load configuration
 function loadConfig() {
   try {
     const configPath = path.join(__dirname, "../config/config.json");
     const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
-    console.log("Loaded config:", configPath);
+
     return {
       excludeDirs: config.excludeDirs || [],
       excludeFiles: config.excludeFiles || [],
@@ -42,8 +43,13 @@ function getDirectoryStructure(
     const isDir = fs.statSync(fullPath).isDirectory();
 
     // Check exclusions
-    if (isDir && config.excludeDirs.includes(item)) return false;
-    if (!isDir && config.excludeFiles.includes(item)) return false;
+    if (isDir && config.excludeDirs.some((pattern) => minimatch(item, pattern)))
+      return false;
+    if (
+      !isDir &&
+      config.excludeFiles.some((pattern) => minimatch(item, pattern))
+    )
+      return false;
 
     // Skip if not including files and it's a file
     if (!includeFiles && !isDir) return false;
