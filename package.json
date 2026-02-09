@@ -1,6 +1,6 @@
 {
   "name": "@etnassoft/node-tree-exporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/cli.js",
   "scripts": {
     "tree-export": "node src/cli.js",
