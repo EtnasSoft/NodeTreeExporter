@@ -95,4 +95,4 @@ Tests use the built-in `node:test` runner and `node:assert` — no external test
 
 ## License
 
-ISC
+MIT
