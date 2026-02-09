@@ -11,7 +11,7 @@
     "Builds",
     "Packages"
   ],
-  "excludeFilesa": [
+  "excludeFiles": [
     "package.json",
     "*.meta",
     "*.asset",

@@ -1,5 +1,5 @@
 {
-  "name": "nodetreeexporter",
+  "name": "@etnassoft/node-tree-exporter",
   "version": "1.0.0",
   "main": "src/cli.js",
   "scripts": {
